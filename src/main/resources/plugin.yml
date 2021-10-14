@@ -1,0 +1,8 @@
+name: ExplosionControl
+description: Provides fine-grained control over every exploding thing in Minecraft.
+authors: [ TehBrian ]
+website: https://github.com/TehBrian/ExplosionControl
+
+version: ${version}
+main: xyz.tehbrian.explosioncontrol.ExplosionControl
+api-version: 1.17

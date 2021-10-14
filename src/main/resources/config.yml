@@ -1,0 +1,9 @@
+worlds:
+#  example_world:
+#    entity:
+#      ender_crystal:
+#        prevent-damage: [ player ]
+#        disable-explosion: false
+#      primed_tnt:
+#        prevent-damage: [ creeper, zombie ]
+#        disable-explosion: true
