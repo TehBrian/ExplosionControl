@@ -43,6 +43,7 @@ tasks {
 
     shadowJar {
         archiveBaseName.set("ExplosionControl")
+        archiveClassifier.set("")
     }
 
     runServer {
