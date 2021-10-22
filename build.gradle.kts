@@ -43,8 +43,6 @@ tasks {
 
     shadowJar {
         archiveBaseName.set("ExplosionControl")
-
-        relocate("net.kyori.adventure", "xyz.tehbrian.nobedexplosions.lib.adventure")
     }
 
     runServer {
