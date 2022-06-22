@@ -6,6 +6,7 @@ plugins {
 
 group = "xyz.tehbrian"
 version = "0.1.0"
+description = "Provides fine-grained control over every exploding thing in Minecraft."
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -38,7 +39,7 @@ dependencies {
 
 tasks {
     processResources {
-        expand("version" to project.version)
+        expand("version" to project.version, "description" to project.description)
     }
 
     shadowJar {

@@ -1,5 +1,5 @@
 name: ExplosionControl
-description: Provides fine-grained control over every exploding thing in Minecraft.
+description: ${description}
 authors: [ TehBrian ]
 website: https://github.com/TehBrian/ExplosionControl
 
