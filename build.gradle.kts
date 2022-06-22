@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "xyz.tehbrian"
-version = "0.1.0"
+version = "0.1.1"
 description = "Provides fine-grained control over every exploding thing in Minecraft."
 
 java {
