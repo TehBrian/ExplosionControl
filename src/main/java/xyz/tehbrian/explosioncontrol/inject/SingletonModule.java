@@ -3,7 +3,7 @@ package xyz.tehbrian.explosioncontrol.inject;
 import com.google.inject.AbstractModule;
 import xyz.tehbrian.explosioncontrol.config.ConfigConfig;
 
-public class ConfigModule extends AbstractModule {
+public final class SingletonModule extends AbstractModule {
 
     @Override
     protected void configure() {

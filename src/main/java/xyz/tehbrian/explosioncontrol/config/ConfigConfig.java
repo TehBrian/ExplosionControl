@@ -37,10 +37,11 @@ public final class ConfigConfig extends AbstractConfig<YamlConfigurateWrapper> {
     @Override
     public void load() throws ConfigurateException {
         this.configurateWrapper.load();
-        final @NonNull CommentedConfigurationNode rootNode = Objects.requireNonNull(this.configurateWrapper.get()); // will not be null as we called #load()
+        // will not be null as we called #load()
+        final @NonNull CommentedConfigurationNode rootNode = Objects.requireNonNull(this.configurateWrapper.get());
         final @NonNull CommentedConfigurationNode worldsNode = Objects.requireNonNull(rootNode.node("worlds"));
 
-        worlds.clear();
+        this.worlds.clear();
 
         for (final Map.Entry<Object, CommentedConfigurationNode> worldNodes : worldsNode.childrenMap().entrySet()) {
             final Map<EntityType, WorldData.EntityData> entity = new HashMap<>();
@@ -104,7 +105,7 @@ public final class ConfigConfig extends AbstractConfig<YamlConfigurateWrapper> {
     }
 
     public @NonNull Map<@NonNull String, @NonNull WorldData> worlds() {
-        return worlds;
+        return this.worlds;
     }
 
     public record WorldData(Map<EntityType, EntityData> entity,

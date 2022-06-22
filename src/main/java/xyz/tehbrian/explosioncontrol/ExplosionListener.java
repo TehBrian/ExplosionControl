@@ -9,7 +9,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import xyz.tehbrian.explosioncontrol.config.ConfigConfig;
 
-public class ExplosionListener implements Listener {
+public final class ExplosionListener implements Listener {
 
     private final ConfigConfig configConfig;
 

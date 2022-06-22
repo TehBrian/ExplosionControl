@@ -7,7 +7,7 @@ import dev.tehbrian.tehlib.paper.TehPlugin;
 import org.checkerframework.checker.nullness.qual.MonotonicNonNull;
 import org.spongepowered.configurate.ConfigurateException;
 import xyz.tehbrian.explosioncontrol.config.ConfigConfig;
-import xyz.tehbrian.explosioncontrol.inject.ConfigModule;
+import xyz.tehbrian.explosioncontrol.inject.SingletonModule;
 import xyz.tehbrian.explosioncontrol.inject.PluginModule;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ExplosionControl extends TehPlugin {
         try {
             this.injector = Guice.createInjector(
                     new PluginModule(this),
-                    new ConfigModule()
+                    new SingletonModule()
             );
         } catch (final Exception e) {
             this.getLog4JLogger().error("Something went wrong while creating the Guice injector.");
