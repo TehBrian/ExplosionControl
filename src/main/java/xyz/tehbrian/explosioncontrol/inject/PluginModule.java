@@ -10,16 +10,10 @@ import xyz.tehbrian.explosioncontrol.ExplosionControl;
 
 import java.nio.file.Path;
 
-/**
- * Guice module which provides bindings for the plugin's instances.
- */
 public final class PluginModule extends AbstractModule {
 
     private final ExplosionControl explosionControl;
 
-    /**
-     * @param explosionControl injected
-     */
     public PluginModule(final @NonNull ExplosionControl explosionControl) {
         this.explosionControl = explosionControl;
     }
@@ -31,8 +25,6 @@ public final class PluginModule extends AbstractModule {
     }
 
     /**
-     * Provides the plugin's Log4J logger.
-     *
      * @return the plugin's Log4J logger
      */
     @Provides
@@ -41,9 +33,7 @@ public final class PluginModule extends AbstractModule {
     }
 
     /**
-     * Provides the plugin's data folder.
-     *
-     * @return the data folder
+     * @return the plugin's data folder
      */
     @Provides
     @Named("dataFolder")
