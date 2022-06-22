@@ -43,6 +43,12 @@ tasks {
     shadowJar {
         archiveBaseName.set("ExplosionControl")
         archiveClassifier.set("")
+
+        val libsPackage = "${project.group}.${project.name}.libs"
+        relocate("com.google.inject", "$libsPackage.guice")
+        relocate("cloud.commandframework", "$libsPackage.cloud")
+        relocate("org.spongepowered.configurate", "$libsPackage.configurate")
+        relocate("dev.tehbrian.tehlib", "$libsPackage.tehlib")
     }
 
     runServer {
