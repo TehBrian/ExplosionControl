@@ -24,10 +24,10 @@ public final class ExplosionControl extends TehPlugin {
                     new SingletonModule()
             );
         } catch (final Exception e) {
-            this.getLog4JLogger().error("Something went wrong while creating the Guice injector.");
-            this.getLog4JLogger().error("Disabling plugin.");
+            this.getSLF4JLogger().error("Something went wrong while creating the Guice injector.");
+            this.getSLF4JLogger().error("Disabling plugin.");
             this.disableSelf();
-            this.getLog4JLogger().error("Printing stack trace, please send this to the developers:", e);
+            this.getSLF4JLogger().error("Printing stack trace, please send this to the developers:", e);
             return;
         }
 
@@ -55,14 +55,14 @@ public final class ExplosionControl extends TehPlugin {
             try {
                 config.load();
             } catch (final ConfigurateException e) {
-                this.getLog4JLogger().error("Exception caught during config load for {}", config.configurateWrapper().filePath());
-                this.getLog4JLogger().error("Please check your config.");
-                this.getLog4JLogger().error("Printing stack trace:", e);
+                this.getSLF4JLogger().error("Exception caught during config load for {}", config.configurateWrapper().filePath());
+                this.getSLF4JLogger().error("Please check your config.");
+                this.getSLF4JLogger().error("Printing stack trace:", e);
                 return false;
             }
         }
 
-        this.getLog4JLogger().info("Successfully loaded configuration.");
+        this.getSLF4JLogger().info("Successfully loaded configuration.");
         return true;
     }
 
