@@ -9,8 +9,7 @@ version = "0.1.0"
 description = "Provides fine-grained control over every exploding thing in Minecraft."
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 repositories {
